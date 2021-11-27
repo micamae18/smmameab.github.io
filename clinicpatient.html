@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
+    <title>Clinic Patient Records</title>
+    <link rel="icon" type="image/icon" href="images/MEAB icon.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    
+ 
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+<div class="page-wrapper chiller-theme toggled">
+  <nav id="sidebar" class="sidebar-wrapper">
+    <div class="sidebar-content">
+      <div class="sidebar-brand">
+        <a href="dashboard.html" style="text-align: center;">Admin Panel</a>
+      </div>
+      <div class="sidebar-header">
+        <div class="user-pic">
+          <img class="img-responsive img-rounded" id="UserPicture"
+            alt="User picture">
+        </div>
+        <div class="user-info">
+          <span class="user-name" id="UserFullname" style="color: white;">
+          </span>
+          <span class="user-role">Administrator</span>
+          <span class="user-status">
+            <i class="fa fa-circle"></i>
+            <span>Online</span>
+          </span>
+        </div>
+      </div>
+      <!-- sidebar-header  -->
+      <div class="sidebar-menu">
+        <ul>
+          <li class="header-menu">
+            <span>General</span>
+          </li>
+          <li class="sidebar">
+            <a href="dashboard.html">
+              <i class="fa fa-tachometer-alt"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="sidebar">
+            <a href="users.html">
+              <i class="fa fa-user"></i>
+              <span>Users</span>
+            </a>
+          </li>
+          <li class="sidebar-dropdown">
+            <a>
+              <i class="fa fa-user"></i>
+              <span>Students</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="students.html">Students List</a>
+                </li>
+                <li>
+                  <a href="grades.html">Grades</a>
+                </li>
+                <li>
+                  <a href="studentclasses.html">Classes</a>
+                </li>
+                <li>
+                  <a href="studentbilling.html">Billing</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a>
+              <i class="fa fa-user"></i>
+              <span>Teachers</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="teachers.html">List of Teachers</a>
+                </li>
+                <li>
+                  <a href="teacherclasses.html">Classes</a>
+                </li>
+                <li>
+                  <a href="teacherspayroll.html">Payroll</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar">
+            <a href="alumni.html">
+              <i class="fa fa-graduation-cap"></i>
+              <span>Alumni</span>
+            </a>
+          </li>
+          <li class="sidebar-dropdown">
+            <a>
+              <i class="fa fa-users"></i>
+              <span>Guidance</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="guidancerecord.html">Guidance Student Record</a>
+                </li>
+                <li>
+                  <a href="guidancehistory.html">Guidance Student History</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a>
+              <i class="fa fa-hospital"></i>
+              <span>Clinic</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="clinicpatient.html">Patients Record</a>
+                </li>
+                <li>
+                  <a href="clinicstudent.html">Students Record</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a>
+              <i class="fa fa-book"></i>
+              <span>Library</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="librarylistofbooks.html">List of Books</a>
+                </li>
+                <li>
+                  <a href="librarybarrowedbooks.html">Borrowed Books</a>
+                </li>
+                <li>
+                  <a href="libraryreturnedbooks.html">Returned Books</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="header-menu">
+            <span>Extra</span>
+          </li>
+          <li class="sidebar-dropdown">
+            <a>
+              <i class="fa fa-bullhorn"></i>
+              <span>Announcement & Events</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="announcement.html">Announcement</a>
+                </li>
+                <li>
+                  <a href="events.html">Events</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="subjects.html">
+              <i class="fa fa-folder"></i>
+              <span>Subjects</span>
+            </a>
+          </li>
+          <li>
+            <a href="classes.html">
+              <i class="fa fa-folder"></i>
+              <span>Classes</span>
+            </a>
+          </li>
+          <li class="sidebar-dropdown">
+            <a>
+              <i class="fa fa-file"></i>
+              <span>Enrollment</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="enrollmentElem.html">Elementary</a>
+                </li>
+                <li>
+                  <a href="enrollmentJHS.html">Junior High School</a>
+                </li>
+                <li>
+                  <a href="enrollmentSHS.html">Senior High School</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="evaluationlistofteachers.html">
+              <i class="fa fa-file-alt"></i>
+              <span>Evaluation</span>
+            </a>
+          </li>
+          <li>
+            <a href="sendEmail.html">
+              <i class="fa fa-envelope"></i>
+              <span>Send Email</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- sidebar-menu  -->
+    </div>
+    <!-- sidebar-content  -->
+    <div class="sidebar-footer">
+      <a data-toggle="modal" data-target="#ExitModal">
+        <i class="fa fa-sign-out-alt"></i>
+      </a>
+    </div>
+  </nav>
+  <!-- sidebar-wrapper  -->
+  <main class="page-content">
+    <div class="container-fluid">
+      <nav class="navbar" style="background-image: url(/images/Patient\ Record.png);">
+      </nav>
+      <br>
+      <!-- search  -->
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Search..." id="searchbarclinicpatient">
+      <div class="input-group-append">
+        <select class="custom-select" id="ClinicPatientCategory">
+          <option value="1" selected>By Name</option>
+          <option value="2">By Medicine</option>
+          <option value="3">By Date</option>
+        </select>
+      </div>
+      <!-- <button class="btn btn-outline-secondary" type="button" id="searchbtn"><i class="fa fa-search"></i></button> -->
+    </div>
+    <!-- search  -->
+    <div class="btnOptions">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ClinicPatientRecordAdd"><i class="fa fa-plus"></i> Add Patient Record</button>
+      <button type="button" class="btn btn-success" id="btnSaveAsExcel" onclick="generateExcel()"><i class="fa fa-file-excel"></i> Excel</button>
+      <button type="button" class="btn btn-danger" id="btnSaveAsPdf" onclick="generatePDF()"><i class="fa fa-file-pdf"></i> PDF</button>
+    </div>
+      <div class="table-responsive">
+        <br>
+        <table class="table table-bordered" id="tableclinicpatient">
+            <thead>
+              <tr>
+                <th scope="col" id="No">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Medicine</th>
+                <th scope="col">Qty</th>
+                <th scope="col">Illness</th>
+                <th scope="col">Date</th>
+                <th scope="col" id="actions">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="tbodyclinicpatientrecord">
+            </tbody>
+          </table>
+      </div>
+      <!-- Modal Add Start-->
+      <div class="modal fade" id="ClinicPatientRecordAdd" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Add Clinic Patient Record</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <span id="clinicpatientlastid" style="display: none;"></span>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                  <label for="clinicpatient_Addfirstname">First Name</label>
+                    <input type="text" class="form-control" id="clinicpatient_Addfirstname" placeholder="First Name">
+                </div>
+                <div class="form-group">
+                  <label for="clinicpatient_Addlastname">Last Name</label>
+                    <input type="text" class="form-control" id="clinicpatient_Addlastname" placeholder="Last Name">
+                </div>
+                <div class="form-group">
+                  <label for="clinicpatient_Addmedicinename">Medicine Name</label>
+                    <input type="email" class="form-control" id="clinicpatient_Addmedicinename" placeholder="Medicine Name">
+                </div>
+                <div class="form-group">
+                  <label for="clinicpatient_Addmedicineqty">Medicine Qty</label>
+                    <input type="number" class="form-control" id="clinicpatient_Addmedicineqty" placeholder="Medicine Qty">
+                </div>
+                <div class="form-group">
+                  <label for="clinicpatient_Addillness">Illness</label>
+                    <input type="text" class="form-control" id="clinicpatient_Addillness" placeholder="Illness">
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button onclick="AddClinicPatientRecord()"type="button" class="btn btn-primary">Add Patient Record</button>
+            </div>
+        </div>
+        </div>
+    </div>
+<!-- Modal Add Ends-->
+<!-- Modal Edit Start-->
+<div class="modal fade" id="ClinicPatientRecordEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Edit Patient Record</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+            <span id="clinicpatientID" style="display: none;"></span>
+            <div class="form-group">
+               <label for="clinicpatient_Editfirstname">First Name</label>
+                <input type="text" class="form-control" id="clinicpatient_Editfirstname" placeholder="First Name">
+            </div>
+            <div class="form-group">
+              <label for="clinicpatient_Editlastname">Last Name</label>
+                <input type="text" class="form-control" id="clinicpatient_Editlastname" placeholder="Last Name">
+            </div>
+            <div class="form-group">
+              <label for="clinicpatient_Editmedicinename">Medicine Name</label>
+                <input type="email" class="form-control" id="clinicpatient_Editmedicinename" placeholder="Medicine Name">
+            </div>
+            <div class="form-group">
+              <label for="clinicpatient_Editmedicineqty">Medicine Qty</label>
+                <input type="number" class="form-control" id="clinicpatient_Editmedicineqty" placeholder="Medicine Qty">
+            </div>
+            <div class="form-group">
+              <label for="clinicpatient_Editillness">Illness</label>
+                <input type="text" class="form-control" id="clinicpatient_Editillness" placeholder="Illness">
+            </div>
+            <span id="clinicpatientdate" style="display: none;"></span>
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button onclick="UpdateClinicPatientRecord()" type="button" class="btn btn-primary">Update Patient Record</button>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- Modal Edit Ends-->
+<!-- Modal Delete Start-->
+<div class="modal fade" id="ClinicPatientRecordDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+      <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalCenterTitle">Delete Patient Record</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+      <div class="modal-body">
+        <span id="patientID" style="display: none;"></span>
+        <p>Do you want to delete <span id="patientfirstname"></span> ?</p>
+      </div>
+      <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+      <button onclick="DeleteClinicPatientRecord()" type="button" class="btn btn-primary">Yes</button>
+      </div>
+  </div>
+  </div>
+</div>
+<!-- Modal Delete Ends-->
+  <!-- Modal Exit Start-->
+  <div class="modal fade" id="ExitModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Exit</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to Exit?</p>
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+        <button onclick="ExitUser()" type="button" class="btn btn-primary">Yes</button>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- Modal Exit Ends-->
+      <footer class="text-center">
+        <div class="mb-2">
+          <small>
+            © 2021 made by - MATH Excellence Academy of Binalonan Inc.
+          </small>
+        </div>
+      </footer>
+    </div>
+  </main>
+  <!-- page-content" -->
+</div>
+<!-- page-wrapper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+   <!--Excel to Pdf-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
+  <script src="https://cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
+  <!--Excel to Pdf-->
+
+<!-- Firebase Config -->      
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyDEffP719DoojHJ4JT5Ld1LwifZEu9tLcE",
+    authDomain: "smmameab.firebaseapp.com",
+    databaseURL: "https://smmameab-default-rtdb.firebaseio.com",
+    projectId: "smmameab",
+    storageBucket: "smmameab.appspot.com",
+    messagingSenderId: "1032647294942",
+    appId: "1:1032647294942:web:680505f28bcbdc631ce74f",
+    measurementId: "G-34BTS4LCQN"
+  };
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  const auth = firebase.auth();
+
+</script>
+<script src="js/clinicpatient.js"></script>
+</body>
+
+</html>

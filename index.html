@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Meab Login</title>
+    <link rel="icon" type="image/icon" href="images/MEAB icon.png" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+	<link rel="stylesheet" href="css/style.css">	
+</head>
+<body>	
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-2">
+                
+            </div>
+            <div class="col-lg-6 col-md-8 login-box">
+                <img src="/images/icon.png" alt="" class="imagelogo">
+                <div class="col-lg-12 login-title" >
+                    ADMIN PANEL
+                </div>
+
+                <div class="col-lg-12 login-form">
+                    <div class="col-lg-12 login-form">
+                            <div class="form-group">
+                                <label class="form-control-label">EMAIL ADDRESS</label>
+                                <input type="email" id="email_field" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label">PASSWORD</label>
+                                <input type="password" id="password_field"class="form-control">
+                            </div>
+
+                            <div class="col-lg-12 loginbttm">
+                                <div class="col-lg-6 login-btm login-text">
+                                    <!-- Error Message -->
+                                </div>
+                                <div class="col-lg-6 login-btm login-button">
+                                    <button onclick="login()" type="button" id="login" class="btn btn-outline-primary">LOGIN</button>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-2"></div>
+            </div>
+        </div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyDEffP719DoojHJ4JT5Ld1LwifZEu9tLcE",
+    authDomain: "smmameab.firebaseapp.com",
+    databaseURL: "https://smmameab-default-rtdb.firebaseio.com",
+    projectId: "smmameab",
+    storageBucket: "smmameab.appspot.com",
+    messagingSenderId: "1032647294942",
+    appId: "1:1032647294942:web:680505f28bcbdc631ce74f",
+    measurementId: "G-34BTS4LCQN"
+  };
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  const auth = firebase.auth();
+</script>
+<script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
+    <title>Clinic Students Record</title>
+    <link rel="icon" type="image/icon" href="/images/MEAB icon.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    
+ 
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="/css/dashboard.css">
+
+</head>
+
+<body>
+<div class="page-wrapper chiller-theme toggled">
+  <nav id="sidebar" class="sidebar-wrapper">
+    <div class="sidebar-content">
+      <div class="sidebar-brand">
+        <a style="text-align: center;">Clinic Admin Panel</a>
+      </div>
+      <div class="sidebar-header">
+        <div class="user-pic">
+          <img class="img-responsive img-rounded" id="UserPicture"
+            alt="User picture">
+        </div>
+        <div class="user-info">
+          <span class="user-name" id="UserFullname">
+          </span>
+          <span class="user-role">Administrator</span>
+          <span class="user-status">
+            <i class="fa fa-circle"></i>
+            <span>Online</span>
+          </span>
+        </div>
+      </div>
+      <!-- sidebar-header  -->
+      <div class="sidebar-menu">
+        <ul>
+          <li class="header-menu">
+            <span>General</span>
+          </li>
+          <li class="sidebar">
+            <a href="clinicdashboard.html">
+              <i class="fa fa-tachometer-alt"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="sidebar">
+            <a href="clinicpatientrecord.html">
+              <i class="fa fa-file-alt"></i>
+              <span>Patients Record</span>
+            </a>
+          </li><li class="sidebar">
+            <a href="clinicstudentrecord.html">
+              <i class="fa fa-file-alt"></i>
+              <span>Students Record</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- sidebar-menu  -->
+    </div>
+    <!-- sidebar-content  -->
+    <div class="sidebar-footer">
+      <a data-toggle="modal" data-target="#ExitModal">
+        <i class="fa fa-sign-out-alt"></i>
+      </a>
+    </div>
+  </nav>
+  <!-- sidebar-wrapper  -->
+  <main class="page-content">
+    <!-- search  -->
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Search..." id="searchbarclinicstudent">
+      <div class="input-group-append">
+        <select class="custom-select" id="ClinicStudentCategory">
+          <option value="1" selected>By Name</option>
+          <option value="2">By Gender</option>
+        </select>
+      </div>
+      <button class="btn btn-outline-secondary" type="button" id="searchbtn"><i class="fa fa-search"></i></button>
+    </div>
+    <!-- search  -->
+    <div class="container-fluid">
+      <h2>Clinic Students Record</h2>
+      <hr>
+      <button type="button" class="btn btn-primary" id="btnSaveAsExcel"><i class="fa fa-file-excel"></i> Excel</button>
+      <button type="button" class="btn btn-primary" id="btnSaveAsPdf"><i class="fa fa-file-pdf"></i> PDF</button>
+      <div class="table-responsive">
+        <br>
+        <table class="table table-bordered" id="tableclinicstudent">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">ContactNumber</th>
+                <th scope="col">Gender</th>
+                <th scope="col">GuardianName</th>
+                <th scope="col">GuardianNumber</th>
+                <th scope="col">Height</th>
+                <th scope="col">Weight</th>
+                <th scope="col">BMI</th>
+                <th scope="col">HistoryIllness</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="tbodyclinicstudentrecord">
+            </tbody>
+          </table>
+      </div>
+        <hr>
+      <footer class="text-center">
+        <div class="mb-2">
+          <small>
+            © 2021 made with <i class="fa fa-heart" style="color:red"></i> by - <a target="_blank" rel="noopener noreferrer">
+              Mica Mae Manzano
+            </a>
+          </small>
+        </div>
+      </footer>
+    </div>
+  </main>
+  <!-- page-content" -->
+</div>
+<!-- page-wrapper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        <!--Excel and PDf-->
+        <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+        <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/jszip.min.js"></script>
+        <!--Excel and PDf-->
+
+<!-- Firebase Config -->      
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyDEffP719DoojHJ4JT5Ld1LwifZEu9tLcE",
+    authDomain: "smmameab.firebaseapp.com",
+    databaseURL: "https://smmameab-default-rtdb.firebaseio.com",
+    projectId: "smmameab",
+    storageBucket: "smmameab.appspot.com",
+    messagingSenderId: "1032647294942",
+    appId: "1:1032647294942:web:680505f28bcbdc631ce74f",
+    measurementId: "G-34BTS4LCQN"
+  };
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const auth = firebase.auth();
+</script>
+<script src="/clinicjs/clinicstudentrecord.js"></script>
+</body>
+
+</html>

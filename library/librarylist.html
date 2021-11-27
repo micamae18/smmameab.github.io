@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
+    <title>Library List of Books</title>
+    <link rel="icon" type="image/icon" href="/images/MEAB icon.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    
+ 
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="/css/dashboard.css">
+
+</head>
+
+<body>
+<div class="page-wrapper chiller-theme toggled">
+  <nav id="sidebar" class="sidebar-wrapper">
+    <div class="sidebar-content">
+      <div class="sidebar-brand">
+        <a style="text-align: center;">Library Admin Panel</a>
+      </div>
+      <div class="sidebar-header">
+        <div class="user-pic">
+          <img class="img-responsive img-rounded" id="UserPicture"
+            alt="User picture">
+        </div>
+        <div class="user-info">
+          <span class="user-name" id="UserFullname">
+          </span>
+          <span class="user-role">Administrator</span>
+          <span class="user-status">
+            <i class="fa fa-circle"></i>
+            <span>Online</span>
+          </span>
+        </div>
+      </div>
+      <div class="sidebar-menu">
+        <ul>
+          <li class="header-menu">
+            <span>General</span>
+          </li>
+          <li class="sidebar">
+            <a href="librarydashboard.html">
+              <i class="fa fa-tachometer-alt"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="sidebar">
+            <a href="librarylist.html">
+              <i class="fa fa-book"></i>
+              <span>List of Books</span>
+            </a>
+          </li><li class="sidebar">
+            <a href="librarybarrowed.html">
+              <i class="fa fa-book"></i>
+              <span>Barrowed Books</span>
+            </a>
+          </li>
+        </li><li class="sidebar">
+            <a href="libraryreturned.html">
+              <i class="fa fa-book"></i>
+              <span>Returned Books</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- sidebar-menu  -->
+    </div>
+    <!-- sidebar-content  -->
+    <div class="sidebar-footer">
+      <a data-toggle="modal" data-target="#ExitModal">
+        <i class="fa fa-sign-out-alt"></i>
+      </a>
+    </div>
+  </nav>
+  <!-- sidebar-wrapper  -->
+  <main class="page-content">
+    <!-- search  -->
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Search..." id="searchbarlibrarylistofbooks">
+      <div class="input-group-append">
+        <select class="custom-select" id="LibraryListofBooksCategory">
+          <option value="1" selected>By Title</option>
+          <option value="2">By Author</option>
+          <option value="3">By Category</option>
+        </select>
+      </div>
+      <button class="btn btn-outline-secondary" type="button" id="searchbtn"><i class="fa fa-search"></i></button>
+    </div>
+    <!-- search  -->
+    <div class="container-fluid">
+      <h2>Library List of Books</h2>
+      <hr>
+      <br>
+      <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Author</th>
+                <th scope="col">Category</th>
+                <th scope="col">Total # Books</th>
+                <th scope="col">Available Books</th>
+                <th scope="col">Barrowed Books</th>
+              </tr>
+            </thead>
+            <tbody id="tbodylibrarylistofbooks">
+            </tbody>
+          </table>
+      <!-- Modal Exit Start-->
+      <div class="modal fade" id="ExitModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Exit</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+              <p>Are you sure you want to Exit?</p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+            <button onclick="ExitUser()" type="button" class="btn btn-primary">Yes</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- Modal Exit Ends-->
+      </div>
+        <hr>
+      <footer class="text-center">
+        <div class="mb-2">
+          <small>
+            © 2021 made with <i class="fa fa-heart" style="color:red"></i> by - <a target="_blank" rel="noopener noreferrer">
+              Mica Mae Manzano
+            </a>
+          </small>
+        </div>
+      </footer>
+    </div>
+  </main>
+  <!-- page-content" -->
+</div>
+<!-- page-wrapper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<!-- Firebase Config -->      
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyDEffP719DoojHJ4JT5Ld1LwifZEu9tLcE",
+    authDomain: "smmameab.firebaseapp.com",
+    databaseURL: "https://smmameab-default-rtdb.firebaseio.com",
+    projectId: "smmameab",
+    storageBucket: "smmameab.appspot.com",
+    messagingSenderId: "1032647294942",
+    appId: "1:1032647294942:web:680505f28bcbdc631ce74f",
+    measurementId: "G-34BTS4LCQN"
+  };
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const auth = firebase.auth();
+</script>
+<script src="/libraryjs/librarylist.js"></script>
+</body>
+
+</html>
